@@ -1,0 +1,23 @@
+APScheduler @ file:///Users/runner/miniforge3/conda-bld/apscheduler_1610113803686/work
+cachetools @ file:///home/conda/feedstock_root/build_artifacts/cachetools_1619593780156/work
+certifi==2021.10.8
+cffi @ file:///Users/runner/miniforge3/conda-bld/cffi_1636046181956/work
+click @ file:///Users/runner/miniforge3/conda-bld/click_1651215220522/work
+cryptography @ file:///opt/concourse/worker/volumes/live/a9ca20dd-e1fe-4ed3-754e-0db64082a5d2/volume/cryptography_1639414576087/work
+Flask @ file:///home/conda/feedstock_root/build_artifacts/flask_1651670959703/work
+importlib-metadata @ file:///Users/runner/miniforge3/conda-bld/importlib-metadata_1648728334687/work
+itsdangerous @ file:///home/conda/feedstock_root/build_artifacts/itsdangerous_1648147185463/work
+Jinja2 @ file:///home/conda/feedstock_root/build_artifacts/jinja2_1651774399431/work
+MarkupSafe @ file:///Users/runner/miniforge3/conda-bld/markupsafe_1648737704633/work
+pycparser @ file:///home/conda/feedstock_root/build_artifacts/pycparser_1636257122734/work
+PySocks @ file:///Users/runner/miniforge3/conda-bld/pysocks_1648857336012/work
+python-telegram-bot @ file:///home/conda/feedstock_root/build_artifacts/python-telegram-bot_1643840282783/work
+pytz @ file:///home/conda/feedstock_root/build_artifacts/pytz_1647961439546/work
+pytz-deprecation-shim @ file:///Users/runner/miniforge3/conda-bld/pytz-deprecation-shim_1637074829745/work
+six @ file:///home/conda/feedstock_root/build_artifacts/six_1620240208055/work
+tornado @ file:///Users/runner/miniforge3/conda-bld/tornado_1648827305366/work
+tzdata @ file:///home/conda/feedstock_root/build_artifacts/python-tzdata_1647621564023/work
+tzlocal @ file:///Users/runner/miniforge3/conda-bld/tzlocal_1648990483934/work
+ujson @ file:///Users/runner/miniforge3/conda-bld/ujson_1649354804702/work
+Werkzeug @ file:///home/conda/feedstock_root/build_artifacts/werkzeug_1651670883478/work
+zipp @ file:///home/conda/feedstock_root/build_artifacts/zipp_1649012893348/work
