@@ -48,7 +48,7 @@ def respond():
                 to this properly'
             bot.sendMessage(chat_id=chat_id, text=error_msg, \
                             reply_to_message_id=msg_id)
-    return
+    return 'ok'
 
 @app.route('/setwebhook', methods=['GET','POST'])
 def setwebhook():
@@ -56,11 +56,9 @@ def setwebhook():
     s = bot.setWebhook('{URL}{HOOK}'.format(URL=heroku_url, HOOK=TOKEN))
     # check if this went ok
     if s:
-        print('webhook was set up properly')
+        return('webhook was set up properly')
     else:
-        print('I fucked up webhook')
-    
-    return
+        return('I fucked up webhook')
 
 @app.route('/')
 def index():
