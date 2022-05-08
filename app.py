@@ -25,7 +25,10 @@ def respond():
     msg_id = new_msg.message.message_id
     
     #what is in the message
-    text = new_msg.message.text.encode('UTF-8').decode()
+    try:
+        text = new_msg.message.text.encode('UTF-8').decode()
+    except Exception:
+        text = "Ha-ha, you bastard, that's not a text"
     
     # print('received message: ', text) # debug
     
