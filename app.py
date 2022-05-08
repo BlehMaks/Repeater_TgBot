@@ -51,7 +51,7 @@ def respond():
     return
 
 @app.route('/setwebhook', methods=['GET','POST'])
-def set_webhook():
+def setwebhook():
     # link the bot object to the app
     s = bot.setWebhook('{URL}{HOOK}'.format(URL=heroku_url, HOOK=TOKEN))
     # check if this went ok
