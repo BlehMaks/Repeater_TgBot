@@ -38,7 +38,7 @@ def respond():
         welcome_msg = 'I am funny repeater bot, I will reply to your message \
             with your own text. I hope you will not get mad at me :)'
         bot.sendChatAction(chat_id=chat_id, action='typing')
-        sleep(1)
+        sleep(2)
         bot.sendMessage(chat_id=chat_id, text=welcome_msg,\
                         reply_to_message_id=msg_id)
     else:
