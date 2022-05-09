@@ -5,9 +5,10 @@ Created on Sat May  7 17:20:19 2022
 
 @author: Maksim Blekhshtein
 """
+from time import sleep
 from flask import Flask, request 
 import telegram
-from bot.config import bot_token, bot_name, heroku_url
+from bot.config import bot_token, heroku_url
 
 global bot, TOKEN #setting global vars
 TOKEN = bot_token #using bot token from config
@@ -19,7 +20,7 @@ app = Flask(__name__) # start flask application
 def respond():
     #get the received message
     new_msg = telegram.Update.de_json(request.get_json(force=True), bot)
-    
+
     #ids of who wrote message and of message itself
     chat_id = new_msg.message.chat_id
     msg_id = new_msg.message.message_id
@@ -28,26 +29,26 @@ def respond():
     try:
         text = new_msg.message.text.encode('UTF-8').decode()
     except Exception:
-        text = "Ha-ha, you bastard, that's not a text"
+        text = "Ha-ha, that's not a text or emoji"
     
     # print('received message: ', text) # debug
     
-    # check if /start command was sent
+    # check if /start command was sent and generate response
     if text == '/start':
         welcome_msg = 'I am funny repeater bot, I will reply to your message \
-            with your own text. I hope you will not get mad at me :) '
+            with your own text. I hope you will not get mad at me :)'
+        bot.sendChatAction(chat_id=chat_id, action='typing')
+        sleep(1)
         bot.sendMessage(chat_id=chat_id, text=welcome_msg,\
                         reply_to_message_id=msg_id)
-        
     else:
         try:
             # reply to the msg with the same text
             bot.sendMessage(chat_id=chat_id, text=text, \
                             reply_to_message_id=msg_id)
-            
         except Exception:
             # if something goes wrong
-            error_msg = 'Fuck, something went wrong, sorry, I will not reply \
+            error_msg = 'Something went wrong, sorry, I will not reply \
                 to this properly'
             bot.sendMessage(chat_id=chat_id, text=error_msg, \
                             reply_to_message_id=msg_id)
@@ -59,9 +60,9 @@ def setwebhook():
     s = bot.setWebhook('{URL}{HOOK}'.format(URL=heroku_url, HOOK=TOKEN))
     # check if this went ok
     if s:
-        return('webhook was set up properly')
+        return('Webhook was set up properly')
     else:
-        return('I fucked up webhook')
+        return('I broke webhook setting up')
 
 @app.route('/')
 def index():
