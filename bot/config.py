@@ -1,1 +1,0 @@
-bot_token = "5100916630:AAG0H8VTcekLsuiH1V91i9zz15f3vTfwl-o"heroku_url = "https://testrepeatertgbot.herokuapp.com/"
