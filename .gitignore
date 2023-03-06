@@ -1,3 +1,2 @@
-*.DS_store
 bot/config.py
-*__pycache__*
+
